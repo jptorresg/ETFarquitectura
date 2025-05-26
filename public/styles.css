@@ -1,0 +1,375 @@
+/* Colores generales */
+:root {
+  --gris-base: #4d4d4d;
+  --gris-oscuro: #1a1a1a;
+  --gris-claro: #bfbfbf;
+  --gris-muy-claro: #f2f2f2;
+  --blanco: #ffffff;
+  --acento: #b7be00;
+
+  --color-fondo: var(--gris-base);
+  --color-texto: var(--blanco);
+  --texto-oscuro: var(--gris-oscuro);
+  --texto-claro: var(--blanco);
+
+  --header-height: 64px;
+  --footer-height: 64px;
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Share Tech Mono', monospace;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  position: relative;
+  width: 100%;
+}
+
+.header-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  padding: 0 2rem;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  color: var(--gris-oscuro);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Links de navegación */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--gris-oscuro);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--acento);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .nav-normal {
+    display: none;
+  }
+
+  .nav-close {
+    display: block;
+    font-size: 2rem;
+  }
+}
+
+/* Secciones */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+/* Proyectos */
+#proyectos {
+  background-color: var(--blanco);
+  color: var(--texto-oscuro);
+}
+
+/* Grid */
+.grid-fancy {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 4rem;
+  padding: 2rem;
+  margin-top: var(--header-height);
+  max-width: 100%;
+  justify-content: center;
+}
+
+/* Items del grid */
+.grid-fancy .item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 400px;
+  width: 250px;
+  background-color: var(--gris-muy-claro);
+  cursor: pointer;
+}
+
+.grid-fancy .item img {
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  opacity: 0.3s ease;
+}
+
+/* Variedad en el grid */
+.grid-fancy .item:nth-child(odd) {
+  transform: translateY(-20px);
+}
+
+/* Overlay de los elementos */
+.grid-fancy .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.grid-fancy .item:hover .overlay {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 628px) {
+  .grid-fancy .item:nth-child(odd) {
+    transform: none;
+  }
+}
+
+/* Info */
+#info {
+  background-color: var(--gris-muy-claro);
+  color: var(--texto-oscuro);
+}
+
+.team-member {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.team-photo img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.team-info {
+  flex: 1;
+  max-width: 700px;
+  margin: 2rem;
+}
+
+.team-info h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--gris-oscuro);
+}
+
+.team-info p {
+  font-size: 1rem;
+  color: var(--gris, #555);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-member {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-info {
+    margin-top: 1rem;
+  }
+}
+
+/* Contacto */
+#contact {
+  background-color: var(--blanco);
+  color: var(--texto-oscuro);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.contact-form label {
+  font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+}
+
+.contact-form button {
+  padding: 0.7rem;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form button:hover {
+  background-color: #333;
+}
+
+/* Vista de proyectos */
+/* Carrusel para vista en escritorio */
+.swiper {
+  margin-top: var(--header-height) !important;
+  width: 80%;
+  margin: auto;
+}
+
+.swiper-wrapper {
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination {
+  bottom: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--acento) !important;
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgba(256, 256, 256, 0.6) !important;
+}
+
+.fa-xmark{
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+/* Vista por tamaño de pantalla */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block;
+    width: 90%;
+    margin: var(--header-height) auto 2rem;
+  }
+
+  .mobile-gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+}
+
+/* Footer */
+footer {
+  position: relative;
+}
+
+.footer-content {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--footer-height);
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--gris-oscuro);
+  z-index: 1000;
+}
+
+/* Íconos del footer*/
+.footer-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-icons a {
+  color: var(--gris-oscuro);
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: var(--acento);
+}

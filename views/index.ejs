@@ -1,0 +1,50 @@
+<%- include('partials/header', { pageTitle: 'ETFarquitectura', page: 'home' }); -%>
+
+<main>
+    <!-- Sección de proyectos -->
+    <section id="proyectos" class="grid-fancy">
+        <% proyectos.forEach(proyecto => { %>
+            <a href="/proyecto/<%= proyecto.id %>" class="item">
+                <img src="<%= proyecto.image1 %>" alt="Imagen de <%= proyecto.titulopt1 %> <%= proyecto.titulopt2 %>">
+                <div class="overlay">
+                    <p><%= proyecto.titulopt1 %> <%= proyecto.titulopt2 %></p>
+                </div>
+            </a>
+        <% }); %>
+    </section>
+
+    <!-- Sección de perfil -->
+    <section id="info">
+        <div class="team-member">
+            <div class="team-photo">
+                <img src="/images/perfil-etf.jpg" alt="Erick Torres">
+            </div>
+            <div class="team-info">
+                <h3>Erick Torres</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contact">
+        <form action="/sendMail" method="POST" class="contact-form">
+            <p>Contáctanos</p>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" placeholder="Escribe tu nombre" required>
+
+            <label for="correo">Correo electrónico</label>
+            <input type="email" name="correo" placeholder="Escribe tu correo" required>
+
+            <label for="asunto">Asunto</label>
+            <input type="text" name="asunto" placeholder="Escribe el asunto" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</main>
+
+<%- include('partials/footer'); -%>

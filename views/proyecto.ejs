@@ -1,0 +1,26 @@
+<%- include ('partials/header', { pageTitle: 'ETFarquitectura' + ' | ' + proyecto.titulopt1 + ' ' + proyecto.titulopt2, page: 'proyecto' }); -%>
+
+<main>
+  <!-- Versión de escritorio: carrusel -->
+  <div class="swiper mySwiper desktop-only">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="<%= proyecto.image1 %>" alt=""></div>
+      <div class="swiper-slide"><img src="<%= proyecto.image2 %>" alt=""></div>
+      <div class="swiper-slide"><img src="<%= proyecto.image3 %>" alt=""></div>
+      <div class="swiper-slide"><img src="<%= proyecto.image4 %>" alt=""></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Versión móvil: imágenes sueltas -->
+  <div class="mobile-gallery mobile-only">
+    <img src="<%= proyecto.image1 %>" alt="">
+    <img src="<%= proyecto.image2 %>" alt="">
+    <img src="<%= proyecto.image3 %>" alt="">
+    <img src="<%= proyecto.image4 %>" alt="">
+  </div>
+</main>
+
+<%- include('partials/footer'); -%>

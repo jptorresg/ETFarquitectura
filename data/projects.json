@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "titulopt1": "titulo",
+        "titulopt2": "del proyecto",
+        "image1": "/images/proyecto1-img1.jpg",
+        "image2": "/images/proyecto1-img2.jpg",
+        "image3": "/images/proyecto1-img3.jpg",
+        "image4": "/images/proyecto1-img4.jpg"
+    },
+    {
+        "id": 2,
+        "titulopt1": "titulo",
+        "titulopt2": "del proyecto",
+        "image1": "/images/proyecto2-img1.png",
+        "image2": "/images/proyecto2-img2.png",
+        "image3": "/images/proyecto2-img3.png",
+        "image4": "/images/proyecto2-img4.png"
+    },
+    {
+        "id": 3,
+        "titulopt1": "titulo",
+        "titulopt2": "del proyecto",
+        "image1": "/images/proyecto3-img1.png",
+        "image2": "/images/proyecto3-img2.png",
+        "image3": "/images/proyecto3-img3.png",
+        "image4": "/images/proyecto3-img4.png"
+    },
+    {
+        "id": 4,
+        "titulopt1": "titulo",
+        "titulopt2": "del proyecto",
+        "image1": "/images/proyecto4-img1.png",
+        "image2": "/images/proyecto4-img2.png",
+        "image3": "/images/proyecto4-img3.png",
+        "image4": "/images/proyecto4-img4.png"
+    },
+    {
+        "id": 5,
+        "titulopt1": "titulo",
+        "titulopt2": "del proyecto",
+        "image1": "/images/proyecto5-img1.png",
+        "image2": "/images/proyecto5-img2.png",
+        "image3": "/images/proyecto5-img3.png",
+        "image4": "/images/proyecto5-img4.png"
+    },
+    {
+        "id": 6,
+        "titulopt1": "titulo",
+        "titulopt2": "del proyecto",
+        "image1": "/images/proyecto6-img1.png",
+        "image2": "/images/proyecto6-img2.png",
+        "image3": "/images/proyecto6-img3.png",
+        "image4": "/images/proyecto6-img4.png"
+    },
+    {
+        "id": 7,
+        "titulopt1": "titulo",
+        "titulopt2": "del proyecto",
+        "image1": "/images/proyecto7-img1.png",
+        "image2": "/images/proyecto7-img2.png",
+        "image3": "/images/proyecto7-img3.png",
+        "image4": "/images/proyecto7-img4.png"
+    },
+    {
+        "id": 8,
+        "titulopt1": "titulo",
+        "titulopt2": "del proyecto",
+        "image1": "/images/proyecto8-img1.png",
+        "image2": "/images/proyecto8-img2.png",
+        "image3": "/images/proyecto8-img3.png",
+        "image4": "/images/proyecto8-img4.png"
+    }
+]

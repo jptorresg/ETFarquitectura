@@ -258,10 +258,11 @@ section {
   cursor: pointer;
   font-size: 1rem;
   font-family: inherit;
+  transition: all 0.3s ease;
 }
 
 .contact-form button:hover {
-  background-color: #333;
+  background-color: var(--acento);
 }
 
 /* Vista de proyectos */
